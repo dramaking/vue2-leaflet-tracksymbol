@@ -8,19 +8,9 @@
 import L from 'leaflet'
 import 'leaflet-tracksymbol'
 
-/*
-const props = {
-  visible: {
-    type: Boolean,
-    custom: true,
-    default: true
-  }
-}
-*/
+import eventsBinder from 'vue2-leaflet'
+import propsBinder from 'vue2-leaflet'
 
-
-import eventsBinder from './eventsBinder.js';
-import propsBinder from './propsBinder.js';
 const events = [
   'click',
   'dblclick',
@@ -39,11 +29,9 @@ const events = [
 const props = {
   latlng: {
     type: [Object, Array]
-	// custom: false
   },
   options: {
     type: Object
-	// custom: false
   },
   visible: {
     type: Boolean,
