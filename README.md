@@ -21,7 +21,7 @@ something like this
 
 ### on &lt;script&gt; add
 
-#### option 1
+#### option 1 - Component locally
 
 In the same template file, at `<script>` part, this will make the component available only to the template in this file
 
@@ -36,7 +36,7 @@ In the same template file, at `<script>` part, this will make the component avai
       ...
     }
 
-#### option 2
+#### option 2 - Component globally
 
 At main Vue configuration, this will make the component available to all templates in your app
 
@@ -45,27 +45,27 @@ At main Vue configuration, this will make the component available to all templat
     ...
     Vue.component('v-ais', Vue2LeafletTracksymbol)
 
-### on &lt;vue script&gt; add
+#### Add To data()
 
-  ...
-  data () {
-    return {
-      options: {
-            trackId: 123,
-            fill: true,
-            fillColor: '#00ffff',
-            fillOpacity: 1.0,
-            stroke: true,
-            color: '#000000',
-            opacity: 1.0,
-            weight: 1.0,
-            speed: 30, // meter per second
-            course: 1.0, // radians
-            heading: 1.0 // radians
+    ...
+    data () {
+      return {
+        options: {
+          trackId: 123,
+          fill: true,
+          fillColor: '#00ffff',
+          fillOpacity: 1.0,
+          stroke: true,
+          color: '#000000',
+          opacity: 1.0,
+          weight: 1.0,
+          speed: 30, // meter per second
+          course: 1.0, // radians
+          heading: 1.0 // radians
+        }
       }
     }
-  }
-  ...
+    ...
 
 ## Develop and build
 
