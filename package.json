@@ -1,0 +1,33 @@
+{
+  "name": "vue2-leaflet-tracksymbol",
+  "version": "1.0.0",
+  "description": "tracksymbol plugin extension for vue2-leaflet package",
+  "main": "dist/Vue2LeafletTracksymbol.js",
+  "scripts": {
+    "build": "vue build Vue2LeafletTracksymbol.vue --prod --lib --config build.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ais-one/vue2-leaflet-tracksymbol.git"
+  },
+  "keywords": [
+    "vue2",
+    "leaflet",
+    "markercluster"
+  ],
+  "author": "Julián Perelli (http://charterme.co/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ais-one/vue2-leaflet-tracksymbol/issues"
+  },
+  "homepage": "https://github.com/ais-one/vue2-leaflet-tracksymbol#readme",
+  "dependencies": {
+    "leaflet": "^1.0.3",
+    "leaflet-tracksymbol": "^1.0.8",
+    "vue2-leaflet": "0.0.42"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.8.1",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
