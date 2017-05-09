@@ -1,4 +1,4 @@
-# vue2-leaflet-tracksymbol [EVENTS IS NOT WORKING, FIXING ISSUE NOW!!! ESTIMATE COMPLETE BY 10 May 2017 0800HRS +8GMT]
+# vue2-leaflet-tracksymbol
 
 This is a [tracksymbol plugin](https://github.com/lethexa/leaflet-tracksymbol) extension for [vue2-leaflet package](https://github.com/KoRiGaN/Vue2Leaflet)
 
