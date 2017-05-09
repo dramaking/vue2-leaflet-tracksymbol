@@ -13,9 +13,9 @@
   "keywords": [
     "vue2",
     "leaflet",
-    "markercluster"
+    "tracksymbol"
   ],
-  "author": "Julián Perelli (http://charterme.co/)",
+  "author": "Aaron Gong (http://charterme.co/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ais-one/vue2-leaflet-tracksymbol/issues"
