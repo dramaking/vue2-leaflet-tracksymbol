@@ -8,8 +8,8 @@
 import L from 'leaflet'
 import 'leaflet-tracksymbol'
 
-import eventsBinder from 'vue2-leaflet'
-import propsBinder from 'vue2-leaflet'
+import eventsBinder from './utils/eventsBinder.js'
+import propsBinder from './utils/propsBinder.js'
 
 const events = [
   'click',
