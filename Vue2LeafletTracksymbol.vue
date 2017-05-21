@@ -43,21 +43,24 @@ const props = {
 export default {
   props: props,
   mounted () {
-    // console.log(this.options)
-    if (!this.options) this.options = {
-    	trackId: 0,
-   		fill: true,
-    	fillColor: '#0000ff',
-    	fillOpacity: 1.0,
-    	stroke: true,
-    	color: '#000000',
-   		opacity: 1.0,
-   		weight: 1.0,
-    	speed: 0,
-    	course: 0,
-    	heading: 0
-    }
-    this.mapObject = L.trackSymbol(this.latlng, this.options)
+    let options = { }
+    options.trackId = this.options.trackId || 0
+    options.fill = this.options.fill || true
+    options.fillColor = this.options.fillColor || '#0000ff'
+    options.fillOpacity = this.options.fillOpacity || 1.0
+    options.stroke = this.options.stroke || true
+    options.color = this.options.color || '#000000'
+    options.opacity = this.options.opacity || 1.0
+    options.weight = this.options.weight || 1.0
+    options.speed = this.options.speed || 0
+    options.course = this.options.course || 0
+    options.heading = this.options.heading || 0
+    options.gpsRefPos = this.options.gpsRefPos || undefined
+    options.minSilouetteZoom = this.options.minSilouetteZoom || 14
+    options.leaderTime = this.options.leaderTime || 60
+    options.defaultSymbol = this.options.defaultSymbol || [0.75,0, -0.25,0.3, -0.25,-0.3]
+    
+    this.mapObject = L.trackSymbol(this.latlng, options)
     eventsBinder(this, this.mapObject, events)
     propsBinder(this, this.mapObject, props)
     if (this.$parent._isMounted) {
