@@ -55,10 +55,10 @@ export default {
     options.speed = this.options.speed || 0
     options.course = this.options.course || 0
     options.heading = this.options.heading || 0
+    options.defaultSymbol = this.options.defaultSymbol || [0.75,0, -0.25,0.3, -0.25,-0.3]
     options.gpsRefPos = this.options.gpsRefPos || undefined
     options.minSilouetteZoom = this.options.minSilouetteZoom || 14
     options.leaderTime = this.options.leaderTime || 60
-    options.defaultSymbol = this.options.defaultSymbol || [0.75,0, -0.25,0.3, -0.25,-0.3]
     
     this.mapObject = L.trackSymbol(this.latlng, options)
     eventsBinder(this, this.mapObject, events)
