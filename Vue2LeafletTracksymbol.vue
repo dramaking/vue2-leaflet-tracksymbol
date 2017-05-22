@@ -59,6 +59,7 @@ export default {
     options.gpsRefPos = this.options.gpsRefPos || undefined
     options.minSilouetteZoom = this.options.minSilouetteZoom || 14
     options.leaderTime = this.options.leaderTime || 60
+    options.data = this.options.data || {}
     
     this.mapObject = L.trackSymbol(this.latlng, options)
     eventsBinder(this, this.mapObject, events)
