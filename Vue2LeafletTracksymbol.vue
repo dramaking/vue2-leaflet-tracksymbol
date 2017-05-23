@@ -56,11 +56,14 @@ export default {
     options.course = this.options.course || 0
     options.heading = this.options.heading || 0
     options.defaultSymbol = this.options.defaultSymbol || [0.75,0, -0.25,0.3, -0.25,-0.3]
+    options.noHeadingSymbol = options.noHeadingSymbol || [0.3,0, 0,0.3, -0.3,0, 0,-0.3];
+    options.silouetteSymbol = options.silouetteSymbol || [1,0.5, 0.75,1, 0,1, 0,0, 0.75,0];
     options.gpsRefPos = this.options.gpsRefPos || undefined
     options.minSilouetteZoom = this.options.minSilouetteZoom || 14
     options.leaderTime = this.options.leaderTime || 60
+    options.size = this.options.size || 24
     options.data = this.options.data || {}
-    
+
     this.mapObject = L.trackSymbol(this.latlng, options)
     eventsBinder(this, this.mapObject, events)
     propsBinder(this, this.mapObject, props)
