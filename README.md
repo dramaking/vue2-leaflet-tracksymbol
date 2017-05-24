@@ -61,7 +61,10 @@ At main Vue configuration, this will make the component available to all templat
           weight: 1.0,
           speed: 30, // meter per second
           course: 1.0, // radians
-          heading: 1.0 // radians
+          heading: 1.0, // radians
+          size: 24,
+          defaultSymbol: [0.75, 0, 0.5, 0.3, -0.5, 0.3, -0.25, 0, -0.5, -0.3, 0.5, -0.3],
+          data: { name: 'Boat 2', custom: 'other info' }
         }
       }
     }
@@ -79,3 +82,19 @@ At main Vue configuration, this will make the component available to all templat
 ## License
 
 MIT
+
+## Changes
+
+* 1.0.7
+  * update vue2-leaflet to 0.0.50
+* 1.0.6
+  * add size, no heading shape and silhoutte shape options
+* 1.0.5
+  * add optional data field for user custom data
+* 1.0.4
+  * fix error in tracksymbol default options
+* 1.0.3
+  * updated default options and vue2-leaflet version
+* 1.0.2
+* 1.0.1
+* 1.0.0
