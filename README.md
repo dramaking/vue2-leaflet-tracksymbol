@@ -86,6 +86,8 @@ MIT
 ## Changes
 
 * 1.0.7
+  * update vue2-leaflet to 0.0.51
+* 1.0.7
   * update vue2-leaflet to 0.0.50
 * 1.0.6
   * add size, no heading shape and silhoutte shape options
