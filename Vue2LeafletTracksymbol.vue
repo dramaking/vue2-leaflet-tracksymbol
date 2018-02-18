@@ -27,7 +27,7 @@ const events = [
 ];
 
 const props = {
-  latlng: {
+  latLng: {
     type: [Object, Array]
   },
   options: {
@@ -64,7 +64,7 @@ export default {
     options.size = this.options.size || 24
     options.data = this.options.data || {}
 
-    this.mapObject = L.trackSymbol(this.latlng, options)
+    this.mapObject = L.trackSymbol(this.latLng, options)
     eventsBinder(this, this.mapObject, events)
     propsBinder(this, this.mapObject, props)
     if (this.$parent._isMounted) {

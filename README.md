@@ -60,10 +60,11 @@ You can refer to the App.vue file of the included example on how it is done
 ### App.vue
     <template>
       <div id="app">
-        <v-map  style="height: 90%" :zoom=13 :center="[47.413220, -1.219482]">
+        <button @click.prevent="ChangeLocation">Change Location</button>
+        <v-map  style="height: 90%" :zoom=13 :center="mapCenter">
           <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-          <v-marker :lat-lng="[47.413220, -1.219482]"></v-marker>
-          <v-ais :latlng="[47.413220, -1.209482]" :options="options"></v-ais>
+          <!-- v-marker :lat-lng="location"></v-marker -->
+          <v-ais :lat-lng="location" :options="options"></v-ais>
         </v-map>
       </div>
     </template>
@@ -82,8 +83,15 @@ You can refer to the App.vue file of the included example on how it is done
 
     export default {
       name: 'app',
+      methods: {
+        ChangeLocation () {
+          this.location= [47.413220, -1.209482]
+        }
+      },
       data () {
         return {
+          mapCenter: [47.413220, -1.219482],
+          location: [47.413220, -1.219482],
           options: {
             trackId: 123,
             fill: true,
@@ -128,10 +136,11 @@ MIT
 
 ## Changes
 
+* 1.0.10
+  * fix issue #2
 * 1.0.9
   * update vue2-leaflet to 0.0.58 and leaflet to 1.3.1, leaflet-tracksymbol stays at version 1.0.8
   * update component source code, example program & improve documentation, use poi for packaging
-
 * 1.0.8
   * update to leaflet-tracksymbol 1.0.8 (coincidence)
 * 1.0.7
