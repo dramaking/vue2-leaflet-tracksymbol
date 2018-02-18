@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <v-map  style="height: 90%" :zoom=13 :center="[47.413220, -1.219482]">
+    <button @click.prevent="ChangeLocation">Change Location</button>
+    <v-map  style="height: 90%" :zoom=13 :center="mapCenter">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <v-marker :lat-lng="[47.413220, -1.219482]"></v-marker>
-      <v-ais :latlng="[47.413220, -1.209482]" :options="options"></v-ais>
+      <!-- v-marker :lat-lng="location"></v-marker -->
+      <v-ais :lat-lng="location" :options="options"></v-ais>
     </v-map>
   </div>
 </template>
@@ -22,8 +23,15 @@ Vue.component('v-marker', Vue2Leaflet.Marker);
 
 export default {
   name: 'app',
+  methods: {
+    ChangeLocation () {
+      this.location= [47.413220, -1.209482]
+    }
+  },
   data () {
     return {
+      mapCenter: [47.413220, -1.219482],
+      location: [47.413220, -1.219482],
       options: {
         trackId: 123,
         fill: true,
