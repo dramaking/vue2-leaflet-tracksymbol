@@ -1,3 +1,4 @@
+
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -13,6 +14,12 @@ export default (vueElement, leafletElement, props, options) => {
     if (props[key].custom) {
       vueElement.$watch(key, (newVal, oldVal) => {
         vueElement[setMethodName](newVal, oldVal);
+      }, {
+        deep: deepValue
+      });
+    } else if (setMethodName == 'setOptions') {
+      vueElement.$watch(key, (newVal, oldVal) => {
+        L.setOptions(leafletElement, newVal);
       }, {
         deep: deepValue
       });
