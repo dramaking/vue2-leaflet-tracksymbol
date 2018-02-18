@@ -46,6 +46,11 @@ Thanks to [Julián Perelli](https://jperelli.com.ar/) of [markercluster plugin](
 
     # goto project and install dependencies
     cd test
+
+    # install dependencies
+    npm install
+
+    # install the component
     npm install --save vue2-leaflet-tracksymbol
 
 ## Edit The App.vue component
@@ -110,6 +115,8 @@ You can refer to the App.vue file of the included example on how it is done
     }
     </style>
 
+### run the app
+    npm run dev
 
 ## Author
 
